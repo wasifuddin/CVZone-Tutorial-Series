@@ -1,10 +1,10 @@
 # pip install cvzone
 # pip install opencv-contrib-python
 
-import cvzone
+from cvzone.HandTrackingModule import HandDetector
 import cv2
 cap = cv2.VideoCapture(1)
-detector = cvzone.HandDetector(detectionCon=0.5, maxHands=2)
+detector = HandDetector(detectionCon=0.5, maxHands=2)
 while True:
     success, img = cap.read()
     img = cv2.flip(img,1)
